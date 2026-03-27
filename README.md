@@ -5,20 +5,22 @@ Enhanced version of [Flippinout](https://github.com/mathmati/flippinout) with **
 ## ✨ New Features
 
 ### 🔤 Authentic Display Fonts
-Cycle through **10 fonts** based on real split-flap displays worldwide:
+Cycle through **10 fonts** - Google Fonts that match real split-flap displays:
 
-1. **Original** — Flippinout classic (Arial Black/Helvetica bold stack)
-2. **Frutiger** — European airports (Charles de Gaulle, Schiphol)
-3. **Helvetica** — Swiss/Italian Solari boards (most famous split-flap manufacturer)
-4. **Univers** — Swiss railway stations (SBB)
-5. **DIN** — German transit systems (DB, BVG)
-6. **Futura** — 1960s American airports
-7. **Franklin** — NYC subway and American transit
-8. **Grotesk** — Modern retro-futuristic displays
-9. **Transit** — Contemporary LED/flip hybrids
-10. **Mono** — Classic monospace (vintage computer terminals)
+1. **Arial Black** — Original Flippinout font (system font)
+2. **Work Sans** — Matches Frutiger (European airports: Charles de Gaulle, Schiphol)
+3. **Inter** — Matches Helvetica (Swiss/Italian Solari boards)
+4. **Archivo Black** — Matches Univers (Swiss railways SBB)
+5. **Barlow** — Matches DIN (German transit DB, BVG)
+6. **Montserrat** — Matches Futura (1960s American airports)
+7. **Oswald** — Matches Franklin Gothic (NYC subway)
+8. **Space Grotesk** — Modern retro-futuristic
+9. **DM Sans** — Contemporary transit displays
+10. **Roboto Mono** — Classic monospace terminals
 
-Press **FONT** button (mobile) or **cycle automatically** to see all options
+**Note:** Frutiger, Helvetica, Univers, DIN, Futura, and Franklin Gothic are commercial fonts (~$200-500 each). These Google Fonts are legal open-source alternatives that closely match the originals.
+
+Press **FONT** button (mobile) to cycle • Toast notifications show actual font names
 
 Based on research of Solari, Pragotron, Omega, and Ferranti split-flap manufacturers
 

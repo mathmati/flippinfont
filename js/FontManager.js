@@ -1,20 +1,21 @@
 export class FontManager {
   constructor() {
     // Authentic split-flap display fonts from real installations worldwide
+    // name = what it represents, actualFont = what Google Font is actually used
     this.fonts = [
-      { name: 'Original', family: '"Arial Black", "Helvetica Neue", Arial, sans-serif' }, // Original Flippinout font
-      { name: 'Frutiger', family: '"Work Sans", sans-serif' }, // European airports (Charles de Gaulle)
-      { name: 'Helvetica', family: '"Inter", sans-serif' }, // Swiss/Italian Solari boards
-      { name: 'Univers', family: '"Archivo Black", sans-serif' }, // Swiss railway stations
-      { name: 'DIN', family: '"Barlow", sans-serif' }, // German transit (condensed geometric)
-      { name: 'Futura', family: '"Montserrat", sans-serif' }, // 1960s American airports
-      { name: 'Franklin', family: '"Oswald", sans-serif' }, // NYC subway/transit
-      { name: 'Grotesk', family: '"Space Grotesk", sans-serif' }, // Modern retro-futuristic
-      { name: 'Transit', family: '"DM Sans", sans-serif' }, // Contemporary transit displays
-      { name: 'Mono', family: '"Roboto Mono", monospace' } // Classic monospace option
+      { name: 'Arial Black', actualFont: 'Arial Black', family: '"Arial Black", "Helvetica Neue", Arial, sans-serif' },
+      { name: 'Work Sans', actualFont: 'Work Sans (≈ Frutiger)', family: '"Work Sans", sans-serif' },
+      { name: 'Inter', actualFont: 'Inter (≈ Helvetica)', family: '"Inter", sans-serif' },
+      { name: 'Archivo Black', actualFont: 'Archivo Black (≈ Univers)', family: '"Archivo Black", sans-serif' },
+      { name: 'Barlow', actualFont: 'Barlow (≈ DIN)', family: '"Barlow", sans-serif' },
+      { name: 'Montserrat', actualFont: 'Montserrat (≈ Futura)', family: '"Montserrat", sans-serif' },
+      { name: 'Oswald', actualFont: 'Oswald (≈ Franklin Gothic)', family: '"Oswald", sans-serif' },
+      { name: 'Space Grotesk', actualFont: 'Space Grotesk', family: '"Space Grotesk", sans-serif' },
+      { name: 'DM Sans', actualFont: 'DM Sans', family: '"DM Sans", sans-serif' },
+      { name: 'Roboto Mono', actualFont: 'Roboto Mono', family: '"Roboto Mono", monospace' }
     ];
     
-    this.currentFontIndex = 0; // Starts with Original
+    this.currentFontIndex = 0; // Starts with Arial Black
     this._loadFonts();
     this._applyFont();
   }
@@ -30,7 +31,7 @@ export class FontManager {
   cycleFont() {
     this.currentFontIndex = (this.currentFontIndex + 1) % this.fonts.length;
     this._applyFont();
-    return this.fonts[this.currentFontIndex].name;
+    return this.fonts[this.currentFontIndex].actualFont;
   }
 
   _applyFont() {
