@@ -4,14 +4,16 @@ Enhanced version of [Flippinout](https://github.com/mathmati/flippinout) with **
 
 ## ✨ New Features
 
-### 🔤 Font Cycling
-Cycle through four classic display fonts:
-- **Clearview** — Highway signage font (ultra-readable)
-- **Frutiger** — Airport/transit classic
-- **Helvetica** — Timeless Swiss design
-- **Waltograph** — Disney magic
+### 🔤 Authentic Display Fonts
+Cycle through fonts used on real split-flap displays:
+- **Solari** — Classic Italian split-flap boards (Helvetica Neue) - airports, stations worldwide
+- **Frutiger** — European airport displays (Charles de Gaulle, etc.)
+- **Helvetica** — Swiss/German railway stations
+- **Transit** — Modern transit displays
 
 Press the **FONT** button (mobile) to cycle fonts
+
+Based on research of actual mechanical split-flap manufacturers (Solari, Pragotron, Omega)
 
 ### ✏️ Custom Quotes
 Edit and customize your displayed quotes:
