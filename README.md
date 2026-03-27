@@ -5,15 +5,22 @@ Enhanced version of [Flippinout](https://github.com/mathmati/flippinout) with **
 ## ✨ New Features
 
 ### 🔤 Authentic Display Fonts
-Cycle through fonts used on real split-flap displays:
-- **Solari** — Classic Italian split-flap boards (Helvetica Neue) - airports, stations worldwide
-- **Frutiger** — European airport displays (Charles de Gaulle, etc.)
-- **Helvetica** — Swiss/German railway stations
-- **Transit** — Modern transit displays
+Cycle through **10 fonts** based on real split-flap displays worldwide:
 
-Press the **FONT** button (mobile) to cycle fonts
+1. **Original** — Flippinout classic (Arial Black/Helvetica bold stack)
+2. **Frutiger** — European airports (Charles de Gaulle, Schiphol)
+3. **Helvetica** — Swiss/Italian Solari boards (most famous split-flap manufacturer)
+4. **Univers** — Swiss railway stations (SBB)
+5. **DIN** — German transit systems (DB, BVG)
+6. **Futura** — 1960s American airports
+7. **Franklin** — NYC subway and American transit
+8. **Grotesk** — Modern retro-futuristic displays
+9. **Transit** — Contemporary LED/flip hybrids
+10. **Mono** — Classic monospace (vintage computer terminals)
 
-Based on research of actual mechanical split-flap manufacturers (Solari, Pragotron, Omega)
+Press **FONT** button (mobile) or **cycle automatically** to see all options
+
+Based on research of Solari, Pragotron, Omega, and Ferranti split-flap manufacturers
 
 ### ✏️ Custom Quotes
 Edit and customize your displayed quotes:
