@@ -14,6 +14,7 @@ export class Board {
     this.tiles = [];
     this.currentGrid = [];
     this.accentIndex = 0;
+    this.capsMode = false; // Start with Title Case (caps off)
 
     // Build board DOM
     this.boardEl = document.createElement('div');
@@ -69,6 +70,7 @@ export class Board {
       <div><span>Previous</span><kbd>\u2190</kbd></div>
       <div><span>Clock mode</span><kbd>C</kbd></div>
       <div><span>Change theme</span><kbd>T</kbd></div>
+      <div><span>Toggle CAPS</span><kbd>U</kbd></div>
       <div><span>Fullscreen</span><kbd>F</kbd></div>
       <div><span>Mute</span><kbd>M</kbd></div>
     `;
@@ -96,6 +98,12 @@ export class Board {
     this.fontSettingTile.id = 'font-setting-tile';
     this.fontSettingTile.textContent = 'FONT';
     
+    // Caps tile
+    this.capsSettingTile = document.createElement('div');
+    this.capsSettingTile.className = 'settings-tile';
+    this.capsSettingTile.id = 'caps-setting-tile';
+    this.capsSettingTile.textContent = 'CAPS';
+    
     // Quote editor tile
     this.quoteSettingTile = document.createElement('div');
     this.quoteSettingTile.className = 'settings-tile';
@@ -111,6 +119,7 @@ export class Board {
     settingsTiles.appendChild(this.leftSettingTile);
     settingsTiles.appendChild(this.centerSettingTile);
     settingsTiles.appendChild(this.fontSettingTile);
+    settingsTiles.appendChild(this.capsSettingTile);
     settingsTiles.appendChild(this.quoteSettingTile);
     settingsTiles.appendChild(this.rightSettingTile);
     this.boardEl.appendChild(settingsTiles);
@@ -185,12 +194,22 @@ export class Board {
   _formatToGrid(lines) {
     const grid = [];
     for (let r = 0; r < this.rows; r++) {
-      const line = lines[r] || '';
+      let line = lines[r] || '';
+      
+      // Apply uppercase transformation if caps mode is enabled
+      if (this.capsMode) {
+        line = line.toUpperCase();
+      }
+      
       const padTotal = this.cols - line.length;
       const padLeft = Math.max(0, Math.floor(padTotal / 2));
       const padded = ' '.repeat(padLeft) + line + ' '.repeat(Math.max(0, this.cols - padLeft - line.length));
       grid.push(padded.split(''));
     }
     return grid;
+  }
+
+  setCapsMode(enabled) {
+    this.capsMode = enabled;
   }
 }

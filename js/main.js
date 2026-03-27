@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const quoteEditor = new QuoteEditor(rotator);
   
   let isClockMode = false;
+  let isCapsMode = false;
   
   // Enhanced keyboard controls
   document.addEventListener('keydown', (e) => {
@@ -44,6 +45,27 @@ document.addEventListener('DOMContentLoaded', () => {
         clockMode.stop();
         rotator.start();
         showNotification('Message Mode ON');
+      }
+    }
+    
+    // Caps mode toggle with 'U' key (Uppercase)
+    if (e.key === 'u' || e.key === 'U') {
+      isCapsMode = !isCapsMode;
+      board.setCapsMode(isCapsMode);
+      
+      if (isCapsMode) {
+        showNotification('ALL CAPS ON');
+      } else {
+        showNotification('Title Case');
+      }
+      
+      // Re-display current message with new caps setting
+      if (isClockMode) {
+        clockMode.stop();
+        clockMode.start();
+      } else {
+        rotator.stop();
+        rotator.start();
       }
     }
   });
@@ -91,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const leftSettingTile = document.getElementById('left-setting-tile');
   const centerSettingTile = document.getElementById('center-setting-tile');
   const fontSettingTile = document.getElementById('font-setting-tile');
+  const capsSettingTile = document.getElementById('caps-setting-tile');
   const quoteSettingTile = document.getElementById('quote-setting-tile');
   const rightSettingTile = document.getElementById('right-setting-tile');
   
@@ -139,6 +162,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const fontName = fontManager.cycleFont();
         showNotification(`Font: ${fontName}`);
         fontSettingTile.classList.remove('flipping');
+      }, 150);
+    });
+  }
+  
+  // Caps tile: Toggle ALL CAPS mode
+  if (capsSettingTile) {
+    capsSettingTile.addEventListener('click', () => {
+      capsSettingTile.classList.add('flipping');
+      
+      setTimeout(() => {
+        isCapsMode = !isCapsMode;
+        board.setCapsMode(isCapsMode);
+        
+        if (isCapsMode) {
+          capsSettingTile.classList.add('active');
+          showNotification('ALL CAPS ON');
+        } else {
+          capsSettingTile.classList.remove('active');
+          showNotification('Title Case');
+        }
+        
+        // Re-display current message with new caps setting
+        if (isClockMode) {
+          clockMode.stop();
+          clockMode.start();
+        } else {
+          rotator.stop();
+          rotator.start();
+        }
+        
+        capsSettingTile.classList.remove('flipping');
       }, 150);
     });
   }
