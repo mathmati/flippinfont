@@ -54,6 +54,39 @@
   :fullscreen .settings-tiles {
     bottom: 4px;
   }
+  
+  /* Collapsed state in landscape fullscreen - show only hamburger menu */
+  :fullscreen .settings-tiles.collapsed {
+    justify-content: flex-end;
+  }
+  
+  :fullscreen .settings-tiles.collapsed .settings-tile:not(.menu-toggle) {
+    display: none;
+  }
+  
+  /* Expanded state shows all buttons */
+  :fullscreen .settings-tiles.expanded {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: calc(var(--tile-gap) * 1.5);
+    max-width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: calc(var(--tile-gap) * 2);
+    border-radius: 6px;
+    backdrop-filter: blur(8px);
+  }
+  
+  :fullscreen .settings-tiles.expanded .settings-tile {
+    opacity: 0.8;
+  }
+  
+  :fullscreen .settings-tiles.expanded .menu-toggle {
+    position: absolute;
+    right: calc(var(--tile-gap) * 2);
+    top: calc(var(--tile-gap) * 2);
+  }
 }
 
 /* Vintage grain texture overlay */
@@ -197,6 +230,7 @@
   gap: calc(var(--tile-gap) * 2);
   z-index: 10;
   pointer-events: none;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 767px) {
@@ -261,6 +295,14 @@
   .settings-tile {
     flex-shrink: 0;
   }
+}
+
+/* Menu toggle button (hamburger) */
+.menu-toggle {
+  font-size: calc(var(--tile-size) * 0.5) !important;
+  line-height: 1;
+  padding: 0 !important;
+  min-width: calc(var(--tile-size) * 2) !important;
 }
 
 .settings-tile.flipping {

@@ -79,6 +79,14 @@ export class Board {
     // Settings flip tiles (mobile only - grey/faint)
     const settingsTiles = document.createElement('div');
     settingsTiles.className = 'settings-tiles';
+    settingsTiles.id = 'settings-tiles';
+    
+    // Menu toggle (hamburger) - shows in landscape fullscreen when collapsed
+    this.menuToggle = document.createElement('div');
+    this.menuToggle.className = 'settings-tile menu-toggle settings-tile-primary';
+    this.menuToggle.id = 'menu-toggle';
+    this.menuToggle.innerHTML = '☰'; // Hamburger icon
+    this.menuToggle.style.display = 'none'; // Hidden by default, shown in landscape fullscreen
     
     // Theme tile
     this.leftSettingTile = document.createElement('div');
@@ -116,6 +124,7 @@ export class Board {
     this.rightSettingTile.id = 'right-setting-tile';
     this.rightSettingTile.textContent = 'FULL';
     
+    settingsTiles.appendChild(this.menuToggle);
     settingsTiles.appendChild(this.leftSettingTile);
     settingsTiles.appendChild(this.centerSettingTile);
     settingsTiles.appendChild(this.fontSettingTile);
@@ -123,6 +132,9 @@ export class Board {
     settingsTiles.appendChild(this.quoteSettingTile);
     settingsTiles.appendChild(this.rightSettingTile);
     this.boardEl.appendChild(settingsTiles);
+    
+    // Handle landscape fullscreen menu collapse/expand
+    this._setupMenuToggle(settingsTiles, this.menuToggle);
 
     containerEl.appendChild(this.boardEl);
     this._updateAccentColors();
@@ -211,5 +223,54 @@ export class Board {
 
   setCapsMode(enabled) {
     this.capsMode = enabled;
+  }
+
+  _setupMenuToggle(settingsTiles, menuToggle) {
+    let isExpanded = false;
+    
+    // Toggle menu expansion
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isExpanded = !isExpanded;
+      
+      if (isExpanded) {
+        settingsTiles.classList.remove('collapsed');
+        settingsTiles.classList.add('expanded');
+        menuToggle.innerHTML = '✕'; // X icon when expanded
+      } else {
+        settingsTiles.classList.remove('expanded');
+        settingsTiles.classList.add('collapsed');
+        menuToggle.innerHTML = '☰'; // Hamburger when collapsed
+      }
+    });
+    
+    // Detect fullscreen + orientation changes
+    const updateMenuState = () => {
+      const isFullscreen = !!document.fullscreenElement;
+      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+      
+      if (isFullscreen && isLandscape && isMobile) {
+        // Landscape fullscreen: show hamburger, start collapsed
+        menuToggle.style.display = 'flex';
+        settingsTiles.classList.add('collapsed');
+        settingsTiles.classList.remove('expanded');
+        menuToggle.innerHTML = '☰';
+        isExpanded = false;
+      } else {
+        // Normal mode: hide hamburger, show all buttons
+        menuToggle.style.display = 'none';
+        settingsTiles.classList.remove('collapsed', 'expanded');
+        isExpanded = false;
+      }
+    };
+    
+    // Listen for fullscreen and orientation changes
+    document.addEventListener('fullscreenchange', updateMenuState);
+    window.addEventListener('orientationchange', () => setTimeout(updateMenuState, 100));
+    window.addEventListener('resize', updateMenuState);
+    
+    // Initial state
+    updateMenuState();
   }
 }
