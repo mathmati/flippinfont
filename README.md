@@ -45,17 +45,19 @@ Press **T** or **THEME** button to cycle themes
 | **←** | Previous message |
 | **C** | Toggle clock mode |
 | **T** | Cycle theme |
+| **U** | Toggle ALL CAPS / Title Case (NEW!) |
 | **F** | Fullscreen |
 | **M** | Mute/unmute |
 | **N** | Show shortcuts |
 
 ## 📱 Mobile Controls
 
-Five buttons at bottom:
+Six buttons at bottom:
 - **THEME** — Cycle through monochrome themes
 - **CLOCK** — Toggle live clock mode
-- **FONT** — Cycle through display fonts (NEW!)
-- **EDIT** — Open quote editor (NEW!)
+- **FONT** — Cycle through display fonts
+- **CAPS** — Toggle ALL CAPS / Title Case (NEW!)
+- **EDIT** — Open quote editor
 - **FULL** — Enter fullscreen mode
 
 ## 🚀 Quick Start
@@ -121,5 +123,5 @@ Same as original — check original repo for license details.
 
 ---
 
-**Mobile: THEME · CLOCK · FONT · EDIT · FULL**  
-**Desktop: T (theme) · C (clock) · F (fullscreen)**
+**Mobile: THEME · CLOCK · FONT · CAPS · EDIT · FULL**  
+**Desktop: T (theme) · C (clock) · U (caps) · F (fullscreen)**
