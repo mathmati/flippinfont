@@ -1,13 +1,13 @@
 export class FontManager {
   constructor() {
     this.fonts = [
-      { name: 'Clearview', family: '"Clearview", "Helvetica Neue", Arial, sans-serif' },
       { name: 'Frutiger', family: '"Frutiger", "Frutiger Next", Arial, sans-serif' },
       { name: 'Helvetica', family: '"Helvetica Neue", Helvetica, Arial, sans-serif' },
+      { name: 'Clearview', family: '"Clearview", "Helvetica Neue", Arial, sans-serif' },
       { name: 'Waltograph', family: '"Waltograph", "Comic Sans MS", cursive' }
     ];
     
-    this.currentFontIndex = 0;
+    this.currentFontIndex = 0; // Now starts with Frutiger (index 0)
     this._loadFonts();
     this._applyFont();
   }
