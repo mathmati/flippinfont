@@ -8,7 +8,7 @@ export const STAGGER_DELAY = 35;
 export const TOTAL_TRANSITION = 5000;
 export const MESSAGE_INTERVAL = 6000;
 
-export const CHARSET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,-!?\'/: ';
+export const CHARSET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,-!?\'/: ';
 
 // Vintage display themes (monochrome per theme - authentic to real mechanical boards)
 export const THEMES = {
@@ -51,100 +51,100 @@ export const THEMES = {
 export const MESSAGES = [
   [
     '',
-    'GOD IS IN',
-    'THE DETAILS .',
+    'God Is In',
+    'The Details .',
     '',
-    '- LUDWIG MIES',
-    '',
-    ''
-  ],
-  [
-    '',
-    'STAY HUNGRY',
-    'STAY FOOLISH',
-    '',
-    '- STEVE JOBS',
+    '- Ludwig Mies',
     '',
     ''
   ],
   [
     '',
-    'GOOD DESIGN IS',
-    'GOOD BUSINESS',
+    'Stay Hungry',
+    'Stay Foolish',
     '',
-    '- THOMAS WATSON',
-    '',
-    ''
-  ],
-  [
-    '',
-    'LESS IS MORE',
-    '',
-    '',
-    '- MIES VAN DER ROHE',
+    '- Steve Jobs',
     '',
     ''
   ],
   [
     '',
-    'MAKE IT SIMPLE',
-    'BUT SIGNIFICANT',
+    'Good Design Is',
+    'Good Business',
     '',
-    '- DON DRAPER',
-    '',
-    ''
-  ],
-  [
-    '',
-    'HAVE NO FEAR OF',
-    'PERFECTION',
-    '',
-    '- SALVADOR DALI',
+    '- Thomas Watson',
     '',
     ''
   ],
   [
     '',
-    'FORM FOLLOWS',
-    'FUNCTION',
-    '',
-    '- LOUIS SULLIVAN',
-    '',
-    ''
-  ],
-  [
-    'DESIGN IS NOT',
-    'JUST WHAT IT LOOKS',
-    'LIKE AND FEELS LIKE',
-    '',
-    'DESIGN IS HOW',
-    'IT WORKS',
-    ''
-  ],
-  [
-    '',
-    'SIMPLICITY IS THE',
-    'ULTIMATE',
-    'SOPHISTICATION',
+    'Less Is More',
     '',
     '',
-    ''
-  ],
-  [
-    'THE BEST WAY TO',
-    'PREDICT THE FUTURE',
-    'IS TO INVENT IT',
-    '',
-    '- ALAN KAY',
+    '- Mies Van Der Rohe',
     '',
     ''
   ],
   [
     '',
-    'I WILL RAGE CODE',
-    'THIS IN A FEW MINUTES',
+    'Make It Simple',
+    'But Significant',
     '',
-    '- WAYNE',
+    '- Don Draper',
+    '',
+    ''
+  ],
+  [
+    '',
+    'Have No Fear Of',
+    'Perfection',
+    '',
+    '- Salvador Dali',
+    '',
+    ''
+  ],
+  [
+    '',
+    'Form Follows',
+    'Function',
+    '',
+    '- Louis Sullivan',
+    '',
+    ''
+  ],
+  [
+    'Design Is Not',
+    'Just What It Looks',
+    'Like And Feels Like',
+    '',
+    'Design Is How',
+    'It Works',
+    ''
+  ],
+  [
+    '',
+    'Simplicity Is The',
+    'Ultimate',
+    'Sophistication',
+    '',
+    '',
+    ''
+  ],
+  [
+    'The Best Way To',
+    'Predict The Future',
+    'Is To Invent It',
+    '',
+    '- Alan Kay',
+    '',
+    ''
+  ],
+  [
+    '',
+    'I Will Rage Code',
+    'This In A Few Minutes',
+    '',
+    '- Wayne',
     '',
     ''
   ]
