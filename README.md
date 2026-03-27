@@ -1,38 +1,41 @@
-# Flippinout — Authentic Split-Flap Display
+# Flippinfont — Authentic Split-Flap Display with Font Options
 
-Based on [magnum6actual/flipoff](https://github.com/magnum6actual/flipoff), enhanced with **authentic monochrome aesthetics**, improved mechanics, and clock mode.
+Enhanced version of [Flippinout](https://github.com/mathmati/flippinout) with **font cycling** and **custom quote editing**.
 
-## ✨ Key Improvements
+## ✨ New Features
 
-### 🎨 Four Authentic Monochrome Themes
-Real split-flap displays were **never multicolored**—they were mechanical, uniform, functional. This version respects that.
+### 🔤 Font Cycling
+Cycle through four classic display fonts:
+- **Clearview** — Highway signage font (ultra-readable)
+- **Frutiger** — Airport/transit classic
+- **Helvetica** — Timeless Swiss design
+- **Waltograph** — Disney magic
+
+Press the **FONT** button (mobile) to cycle fonts
+
+### ✏️ Custom Quotes
+Edit and customize your displayed quotes:
+- Tap **EDIT** button to open quote editor
+- Add your own messages (7 lines per quote block)
+- Saves to localStorage
+- Reset to defaults anytime
+
+## 🎨 Four Authentic Monochrome Themes
+Real split-flap displays were **never multicolored**—they were mechanical, uniform, functional.
 
 - **Classic Airport** — White on black (train stations, airports)
 - **Vintage Amber** — 1970s airport terminal glow
 - **Terminal Green** — Classic CRT aesthetic  
 - **Railway Blue** — Modern European rail stations
 
-Press **T** to cycle through themes — all monochrome, no rainbow scrambles
+Press **T** or **THEME** button to cycle themes
 
 ### ⏰ Live Clock Mode
 - Real-time clock display with date
 - Mechanical flip animation on every second
-- Toggle with **C** key
+- Toggle with **C** key or **CLOCK** button
 
-### 🔧 Enhanced Mechanics
-- **More authentic timing** — Slower, more deliberate flips (1.2s vs 0.8s scramble)
-- **Better animation** — Mechanical bounce and overshoot on settle
-- **Improved stagger** — 35ms delay between tiles (was 25ms)
-- **Glowing accents** — Theme-colored indicators with glow effects
-- **Vintage grain** — Subtle texture overlay for retro feel
-
-### 🎯 Better Visuals
-- **Larger tiles** — 40-68px (was 36-62px) for better legibility
-- **Improved contrast** — Text shadow and glow for each theme
-- **Deeper shadows** — More 3D depth on tiles
-- **Smoother gaps** — 4-6px spacing (was 3-5px)
-
-## 🎹 Keyboard Controls
+## 🎹 Keyboard Controls (Desktop)
 
 | Key | Action |
 |-----|--------|
@@ -44,47 +47,55 @@ Press **T** to cycle through themes — all monochrome, no rainbow scrambles
 | **M** | Mute/unmute |
 | **N** | Show shortcuts |
 
+## 📱 Mobile Controls
+
+Five buttons at bottom:
+- **THEME** — Cycle through monochrome themes
+- **CLOCK** — Toggle live clock mode
+- **FONT** — Cycle through display fonts (NEW!)
+- **EDIT** — Open quote editor (NEW!)
+- **FULL** — Enter fullscreen mode
+
 ## 🚀 Quick Start
 
-1. Open `index.html` in a browser
-2. Click "Try It Now" or press **F** for fullscreen
-3. Press **C** for clock mode
-4. Press **T** to change themes
+1. Open [https://mathmati.github.io/flippinfont/](https://mathmati.github.io/flippinfont/)
+2. Tap **FULL** for fullscreen
+3. Try **FONT** to change typefaces
+4. Tap **EDIT** to add your own quotes
+5. Cycle themes with **THEME**
 
-## 🎬 Perfect For
+## 🎯 Perfect For
 
 - **Office lobbies** — Display time or rotating quotes
 - **Home decor** — Vintage aesthetic on any TV
-- **Events** — Retro countdown or info boards
+- **Events** — Retro countdown or info boards with custom fonts
 - **Streaming overlays** — OBS browser source with character
-- **Waiting rooms** — Calming mechanical animation
+- **Personal quotes** — Display your own messages in various fonts
 
-## 📦 What Changed
+## 📝 Quote Editor
 
-### Authenticity First
-- **Removed multicolor scramble** — Real split-flap boards were monochrome, not rainbow
-- **Monochrome themes** — Each theme uses one color, just like the real mechanical boards
-- **No gimmicks** — Authentic to 1960s-80s airport/train station displays
+The quote editor lets you customize all displayed messages:
 
-### Code Improvements
-- `ThemeManager.js` — Clean monochrome theme system with CSS variables
-- `ClockMode.js` — Live clock display with date
-- Enhanced timing constants for more mechanical feel
-- Simplified tile animations (no color cycling)
-- Better bounce/settle physics
+1. Tap **EDIT** button
+2. Enter quotes in blocks of 7 lines
+3. Separate blocks with `---` or blank lines
+4. Tap **Save Quotes**
 
-### Visual Enhancements
-- Vintage grain texture overlay
-- Subtle glow on text (authentic phosphor/LED look)
-- Improved tile shadows and depth
-- Larger, bolder font (55% tile size, weight 900)
-- Single accent color per theme (not cycling)
+Example format:
+```
+GOD IS IN
+THE DETAILS .
 
-### UX Polish
-- On-screen notifications for mode changes
-- Keyboard hints in hero section
-- Updated shortcuts overlay
-- Honest copy (no marketing fluff)
+- LUDWIG MIES
+
+
+---
+
+YOUR CUSTOM
+QUOTE HERE
+```
+
+Quotes save to your browser's localStorage and persist across visits.
 
 ## 🎨 Theme Philosophy
 
@@ -98,6 +109,7 @@ Authentic to: airports, train stations, baseball scoreboards, stock tickers.
 
 ## 📝 Credits
 
+Based on: [Flippinout](https://github.com/mathmati/flippinout)  
 Original: [magnum6actual/flipoff](https://github.com/magnum6actual/flipoff)  
 Enhanced by: Clawd (Mathew's AI assistant)
 
@@ -107,4 +119,5 @@ Same as original — check original repo for license details.
 
 ---
 
-**Press T to cycle themes · Press C for clock · Press F for fullscreen**
+**Mobile: THEME · CLOCK · FONT · EDIT · FULL**  
+**Desktop: T (theme) · C (clock) · F (fullscreen)**
