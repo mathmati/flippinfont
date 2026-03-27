@@ -12,7 +12,8 @@ export class FontManager {
       { name: 'Oswald', actualFont: 'Oswald (≈ Franklin Gothic)', family: '"Oswald", sans-serif' },
       { name: 'Space Grotesk', actualFont: 'Space Grotesk', family: '"Space Grotesk", sans-serif' },
       { name: 'DM Sans', actualFont: 'DM Sans', family: '"DM Sans", sans-serif' },
-      { name: 'Roboto Mono', actualFont: 'Roboto Mono', family: '"Roboto Mono", monospace' }
+      { name: 'Roboto Mono', actualFont: 'Roboto Mono', family: '"Roboto Mono", monospace' },
+      { name: 'Space Mono', actualFont: 'Space Mono (≈ Solari)', family: '"Space Mono", monospace' }
     ];
     
     this.currentFontIndex = 0; // Starts with Arial Black
@@ -23,7 +24,7 @@ export class FontManager {
   _loadFonts() {
     // Load all Google Fonts at weights 700-900 for authentic bold split-flap look
     const link = document.createElement('link');
-    link.href = 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@800;900&family=Inter:wght@800;900&family=Archivo+Black&family=Barlow:wght@700;900&family=Montserrat:wght@800;900&family=Oswald:wght@700&family=Space+Grotesk:wght@700&family=DM+Sans:wght@800;900&family=Roboto+Mono:wght@700;900&display=swap';
+    link.href = 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@800;900&family=Inter:wght@800;900&family=Archivo+Black&family=Barlow:wght@700;900&family=Montserrat:wght@800;900&family=Oswald:wght@700&family=Space+Grotesk:wght@700&family=DM+Sans:wght@800;900&family=Roboto+Mono:wght@700;900&family=Space+Mono:wght@700&display=swap';
     link.rel = 'stylesheet';
     document.head.appendChild(link);
   }
