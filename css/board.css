@@ -320,9 +320,21 @@
   bottom: calc(var(--tile-gap) + 2px);
 }
 
-/* Hide on desktop */
-@media (min-width: 768px) {
+/* Hide on desktop - but detect mobile in landscape by max-height */
+@media (min-width: 768px) and (min-height: 600px) {
   .settings-tiles {
     display: none !important;
+  }
+}
+
+/* Always show in fullscreen mode, even on desktop */
+:fullscreen .settings-tiles {
+  display: flex !important;
+}
+
+/* Ensure mobile landscape shows menu (height < 600px is typically mobile) */
+@media (max-height: 599px) {
+  .settings-tiles {
+    display: flex !important;
   }
 }
