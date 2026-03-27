@@ -65,9 +65,15 @@ Six buttons at bottom:
 - **THEME** — Cycle through monochrome themes
 - **CLOCK** — Toggle live clock mode
 - **FONT** — Cycle through display fonts
-- **CAPS** — Toggle ALL CAPS / Title Case (NEW!)
+- **CAPS** — Toggle ALL CAPS / Title Case
 - **EDIT** — Open quote editor
 - **FULL** — Enter fullscreen mode
+
+**Landscape fullscreen mode:**
+- Shows **☰** (hamburger menu) to save space
+- **Tap to expand** → all 6 buttons appear with dark background
+- **Tap ✕ to collapse** → back to hamburger only
+- Auto-adapts on orientation change
 
 ## 🚀 Quick Start
 
